@@ -1,4 +1,8 @@
-import { combineReducers, configureStore, PreloadedState } from '@reduxjs/toolkit'
+import {
+  combineReducers,
+  configureStore,
+  PreloadedState
+} from '@reduxjs/toolkit'
 
 import carrinhoReducer from './reducers/carrinho'
 
@@ -10,9 +14,9 @@ const rootReducer = combineReducers({
 })
 
 export function configuraStore(preloadedState?: PreloadedState<RootState>) {
-  return configuraStore({
+  return configureStore({
     reducer: rootReducer,
-    middleware: (getDefaultMiddleware) => 
+    middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware().concat(api.middleware),
     preloadedState
   })
