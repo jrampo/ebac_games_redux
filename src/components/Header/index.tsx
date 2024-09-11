@@ -21,7 +21,7 @@ const Header = () => {
       <div>
         <img src={cesta} />
         <div>
-          <span data-testid='qtd-carrinho'>
+          <span data-testid="qtd-carrinho">
             {itens.length} itens, valor total: {paraReal(valorTotal)}
           </span>
         </div>

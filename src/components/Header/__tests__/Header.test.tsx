@@ -6,12 +6,12 @@ import { renderizaComProvider } from '../../../utils/tests'
 
 describe('testes para o header', () => {
   test('deve renderizar corretamente', () => {
-    renderizaComProvider(<Header/>)
+    renderizaComProvider(<Header />)
     expect(screen.getByText('EBAC Games')).toBeInTheDocument()
   })
 
   test('deve renderizar com 2 itens no carrinhos', () => {
-    renderizaComProvider(<Header/>, {
+    renderizaComProvider(<Header />, {
       preloadedState: {
         carrinho: {
           itens: [
@@ -33,7 +33,6 @@ describe('testes para o header', () => {
               precoAntigo: 299.9,
               titulo: 'hogwarts legacy'
             }
-            
           ]
         }
       }
